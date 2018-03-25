@@ -1,12 +1,10 @@
 package br.com.psg.designpatterns.iterator.shared;
 
-import br.com.psg.designpatterns.iterator.externo.IteratorExternMarketPlace;
-
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
-public class MarketPlaceAmericanas implements IteratorExternMarketPlace<IteratorMarketPlaceProductList> {
+public class MarketPlaceAmericanas implements IteratorMarketPlace<IteratorMarketPlaceProductList> {
 
     private List<Product> product;
 
