@@ -28,8 +28,11 @@ public class Transfer {
 	}
 	
 	public Boolean execute() {
-		getFrom().setValue(getFrom().getValue().subtract(value));
-		getTo().setValue(getTo().getValue().add(value));
+		if(getFrom() == null || getTo() == null) {
+			throw new RuntimeException("Accounts From and To are required!");
+		}
+		getFrom().subtract(value);
+		getTo().add(value);
 		return true;
 	}
 	

@@ -5,14 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * A fake repository to simulate the design pattern Facade
+ * A fake repository
  * @author leandroulisses
  */
 public class AccountRepository {
 
-	private Map<Long, Account> accounts = new HashMap<>();
+	private static Map<Long, Account> accounts = new HashMap<>();
 	
-	public AccountRepository() {
+	static {
 		Account account = new Account();
 		account.setId(1l);
 		account.setName("Ozzy Osbourne");
@@ -27,7 +27,7 @@ public class AccountRepository {
 	}
 	
 	
-	public Account findById(Long id) {
+	public static Account findById(Long id) {
 		return accounts.get(id);
 	}
 	

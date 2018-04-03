@@ -27,4 +27,12 @@ public class Account {
 		this.value = value;
 	}
 	
+	public void add(BigDecimal value) {
+		this.value = this.value.add(value);
+	}
+	
+	public void subtract(BigDecimal value) {
+		this.value = this.value.subtract(value);
+	}
+	
 }

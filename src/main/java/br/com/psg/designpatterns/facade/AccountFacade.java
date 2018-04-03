@@ -4,15 +4,9 @@ import java.math.BigDecimal;
 
 public class AccountFacade {
 	
-	private AccountRepository repository;
-	
-	public AccountFacade() {
-		repository = new AccountRepository();
-	}
-
 	public Boolean transfer(Long idAccountFrom, Long idAccountTo, BigDecimal value) {
-		Account from = repository.findById(idAccountFrom);
-		Account to = repository.findById(idAccountTo);
+		Account from = AccountRepository.findById(idAccountFrom);
+		Account to = AccountRepository.findById(idAccountTo);
 		Transfer transfer = new Transfer();
 		transfer.setFrom(from);
 		transfer.setTo(to);
